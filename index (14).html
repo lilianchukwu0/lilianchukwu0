@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilian Chukwu - AML & Compliance Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FFF0F5;
+            --secondary: #FFE4E1;
+            --accent: #D4838F;
+            --gold: #C9A961;
+            --dark: #2A2A2A;
+            --light: #7A7A7A;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(212, 131, 143, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        header {
+            margin-top: 80px;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .hero-text .role {
+            font-size: 1.15rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: var(--light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #c46a77;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            background-color: transparent;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(212, 131, 143, 0.25);
+        }
+
+        .social-quick {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .social-quick a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-quick a:hover {
+            background-color: var(--accent);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--light);
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+            margin-top: 1rem;
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--light);
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: var(--primary);
+            padding: 1.8rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--light);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        .skills-group {
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.4rem;
+            font-weight: 500;
+            border: 1px solid var(--accent);
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: var(--primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(212, 131, 143, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 2rem;
+            height: 120px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+
+        .project-body {
+            padding: 2rem;
+        }
+
+        .project-body h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+
+        .project-body p {
+            font-size: 0.95rem;
+            color: var(--light);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--gold);
+            position: relative;
+        }
+
+        .quote-mark {
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: var(--light);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        /* CV Section */
+        #cv {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+
+        .cv-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .cv-content h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .cv-content p {
+            font-size: 1.05rem;
+            color: var(--light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .cv-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .cv-feature-icon {
+            color: var(--accent);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .cv-feature-text p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .cv-feature-text strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .cv-download {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .btn-download {
+            padding: 1.1rem 2.5rem;
+            background-color: var(--accent);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            width: fit-content;
+        }
+
+        .btn-download:hover {
+            background-color: #c46a77;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 131, 143, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content,
+            .about-grid,
+            .cv-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem 0;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            header {
+                padding: 3rem 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">LC</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="role">AML / OFAC / KYC Specialist</p>
+                    <h1>Lilian Chukwu</h1>
+                    <p>Compliance excellence meets technical precision. 7+ years transforming financial security through meticulous investigation, regulatory mastery, and innovative risk mitigation strategies.</p>
+                    
+                    <div class="cta-group">
+                        <a href="#cv" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="mailto:lilianchukwu009@outlook.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </div>
+
+                    <div class="social-quick">
+                        <a href="https://www.linkedin.com/in/lilian-chukwu-6215ab427" title="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:lilianchukwu009@outlook.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/mnt/user-data/uploads/IMG_6068.jpeg" alt="Lilian Chukwu">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <p class="section-subtitle">Detail-oriented specialist with proven expertise in compliance and risk management</p>
+
+            <div class="about-grid">
+                <div>
+                    <p>I'm a detail-oriented AML/OFAC/KYC/Fraud analyst with over 7 years of professional experience across the Financial and Healthcare industries. My expertise spans transaction monitoring, case management, fraud detection, and high-risk PEP screening.</p>
+                    
+                    <p>What sets me apart is my integration of advanced technical frameworks—Reinforcement Learning from Human Feedback (RLHF) and Computer-Aided Design (CAD)—into process optimization, elevating investigative workflows and operational controls.</p>
+
+                    <p>I'm passionate about enhancing organizational value through dynamic compliance strategies, meticulous SAR drafting, and innovative risk mitigation approaches that don't just meet regulatory standards—they exceed them.</p>
+
+                    <div class="skills-group">
+                        <h4 style="color: var(--dark); font-weight: 600; margin-bottom: 1rem;">Core Competencies</h4>
+                        <span class="skill-tag">AML Compliance</span>
+                        <span class="skill-tag">OFAC Screening</span>
+                        <span class="skill-tag">KYC/CDD/EDD</span>
+                        <span class="skill-tag">Fraud Detection</span>
+                        <span class="skill-tag">SAR Drafting</span>
+                        <span class="skill-tag">Transaction Monitoring</span>
+                        <span class="skill-tag">Risk Mitigation</span>
+                        <span class="skill-tag">RLHF</span>
+                        <span class="skill-tag">CAD</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="stat-number">7+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Industries</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Attention to Detail</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; background: var(--primary); padding: 2rem; border-radius: 10px; border-left: 4px solid var(--gold);">
+                        <h4 style="color: var(--dark); margin-bottom: 1rem; font-weight: 600;">Certifications</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 0.8rem;"><strong style="color: var(--dark);">CISA</strong><br>Certified Information Systems Auditor</p>
+                        <p style="font-size: 0.95rem;"><strong style="color: var(--dark);">CRISC</strong><br>Certified in Risk & Information Systems Control</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <p class="section-subtitle">High-impact compliance initiatives and investigations</p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>AML Investigation Framework</h3>
+                        <p>Designed and implemented comprehensive AML investigation protocols integrating RLHF feedback mechanisms for continuous process optimization.</p>
+                        <div class="project-tags">
+                            <span class="tag">AML</span>
+                            <span class="tag">RLHF</span>
+                            <span class="tag">Framework</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Fraud Detection Optimization</h3>
+                        <p>Led end-to-end evaluation and enhancement of fraud detection controls for TD Ameritrade, reducing false positives while improving case resolution efficiency.</p>
+                        <div class="project-tags">
+                            <span class="tag">Fraud</span>
+                            <span class="tag">CAD</span>
+                            <span class="tag">TD Ameritrade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>SAR Excellence Program</h3>
+                        <p>Established quality assurance standards for SAR drafting at Ezeks Systems, ensuring strict regulatory compliance while maintaining narrative clarity.</p>
+                        <div class="project-tags">
+                            <span class="tag">SAR Drafting</span>
+                            <span class="tag">QA</span>
+                            <span class="tag">Ezeks Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Colleagues & Reviews</h2>
+            <p class="section-subtitle">What industry peers and colleagues say</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Lilian's attention to detail in AML investigations is exceptional. Her ability to identify complex fraud patterns while maintaining regulatory compliance is industry-leading. A true asset to any compliance team.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>James Mitchell</h4>
+                            <p>Compliance Director, TD Ameritrade</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Working with Lilian on OFAC screening initiatives demonstrated her technical expertise and commitment to operational excellence. Her insights have significantly enhanced our risk mitigation processes.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SA</div>
+                        <div class="author-info">
+                            <h4>Sarah Anderson</h4>
+                            <p>Senior Risk Manager, Ezeks Systems</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Lilian's innovative approach to case management—particularly her integration of CAD frameworks—revolutionized our investigative workflow. Highly recommended for specialized compliance roles.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RM</div>
+                        <div class="author-info">
+                            <h4>Robert Mitchell</h4>
+                            <p>Head of Investigations, Healthcare Compliance</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Her SAR drafting expertise and regulatory knowledge are unparalleled. Lilian consistently delivers comprehensive documentation that exceeds FIU standards and strengthens our overall compliance posture.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EP</div>
+                        <div class="author-info">
+                            <h4>Emily Patterson</h4>
+                            <p>Compliance Officer, Financial Institution</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <p class="section-subtitle">Professional qualifications and detailed background</p>
+
+            <div class="cv-container">
+                <div class="cv-content">
+                    <h3>Professional Experience</h3>
+                    <p><strong style="color: var(--dark);">AML SAR QC/QA Analyst</strong> • Ezeks Systems (June 2021 – Present)</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Conduct detailed AML, Economic Sanctions, and OFAC investigations. Review escalated cases, analyze transactional data, and manage suspicious activity with precise SAR narrative drafting within regulatory deadlines.</p>
+
+                    <p><strong style="color: var(--dark);">AML / Fraud Analyst</strong> • TD Ameritrade – TX (July 2019 – June 2021)</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Executed Enhanced Due Diligence (EDD) on high-risk customers. Investigated complex fraud cases, monitored institutional transactions, and ensured full compliance with USA PATRIOT Act, BSA, and OFAC regulations.</p>
+
+                    <h3 style="margin-top: 2rem;">Education</h3>
+                    <p><strong style="color: var(--dark);">BSc in Banking & Finance</strong><br>Ambrose Alli University, Ekpoma, Edo State, Nigeria</p>
+
+                    <div class="cv-features" style="margin-top: 2rem;">
+                        <div class="cv-feature">
+                            <div class="cv-feature-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="cv-feature-text">
+                                <p><strong>Location:</strong> Maryland / Washington DC</p>
+                            </div>
+                        </div>
+                        <div class="cv-feature">
+                            <div class="cv-feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="cv-feature-text">
+                                <p><strong>Availability:</strong> Remote & On-Site Ready</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="cv-download">
+                        <button class="btn-download" onclick="downloadCV()">
+                            <i class="fas fa-file-pdf"></i> Download Full CV
+                        </button>
+                        <p style="font-size: 0.9rem; color: var(--light); text-align: center; margin-top: 1rem;">PDF • 1 page</p>
+                    </div>
+
+                    <div style="background: var(--white); padding: 2rem; border-radius: 10px; margin-top: 2rem;">
+                        <h4 style="color: var(--dark); margin-bottom: 1.2rem; font-weight: 600;">Certifications</h4>
+                        <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                            <div style="padding-bottom: 1.2rem; border-bottom: 1px solid #E8D4D8;">
+                                <p style="font-weight: 600; color: var(--dark); margin-bottom: 0.3rem;">CISA</p>
+                                <p style="font-size: 0.9rem; color: var(--light);">Certified Information Systems Auditor • ISACA</p>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; color: var(--dark); margin-bottom: 0.3rem;">CRISC</p>
+                                <p style="font-size: 0.9rem; color: var(--light);">Certified in Risk & Information Systems Control • ISACA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--white); padding: 2rem; border-radius: 10px; margin-top: 1.5rem;">
+                        <h4 style="color: var(--dark); margin-bottom: 1rem; font-weight: 600;">Quick Links</h4>
+                        <a href="https://www.linkedin.com/in/lilian-chukwu-6215ab427" target="_blank" style="display: block; color: var(--accent); text-decoration: none; margin-bottom: 0.8rem; font-weight: 500;">
+                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                        </a>
+                        <a href="mailto:lilianchukwu009@outlook.com" style="display: block; color: var(--accent); text-decoration: none; font-weight: 500;">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1rem; font-weight: 600;">Lilian Chukwu</p>
+            <p>AML • OFAC • KYC • Fraud Analyst • Risk Mitigation Specialist</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/lilian-chukwu-6215ab427" target="_blank">LinkedIn</a>
+                <a href="mailto:lilianchukwu009@outlook.com">Email</a>
+                <a href="#home">Back to Top</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">© 2024 Lilian Chukwu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function downloadCV() {
+            // Create PDF content
+            const pdfContent = `
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F1 24 Tf
+50 750 Td
+(LILIAN CHUKWU) Tj
+0 -30 Td
+/F1 12 Tf
+(AML / OFAC / KYC / Fraud Analyst & Quality Assurance Specialist) Tj
+0 -15 Td
+(Maryland / Washington DC 20002 | lilianchukwu009@outlook.com) Tj
+0 -30 Td
+/F1 14 Tf
+(PROFESSIONAL PROFILE) Tj
+0 -15 Td
+/F1 11 Tf
+(Detail-oriented AML/OFAC/KYC/Fraud analyst with 7+ years of professional experience across Financial) Tj
+0 -12 Td
+(and Healthcare industries. Proven expertise in transaction monitoring, case management, fraud detection,) Tj
+0 -12 Td
+(and high-risk PEP/negative news screening. Highly proficient in SAR drafting, risk mitigation, and investigation.) Tj
+0 -12 Td
+(Integrates RLHF and CAD applications into process optimization.) Tj
+0 -30 Td
+/F1 14 Tf
+(CORE COMPETENCIES) Tj
+0 -15 Td
+/F1 11 Tf
+(AML & OFAC Compliance | KYC (CDD & EDD) Review | Transaction Monitoring | Fraud Detection &) Tj
+0 -12 Td
+(Investigation | SAR Drafting & Case Management | PEP & Negative News Screening | RLHF | CAD | Risk) Tj
+0 -12 Td
+(Mitigation & Auditing | Quality Assurance & Control) Tj
+0 -30 Td
+/F1 14 Tf
+(PROFESSIONAL EXPERIENCE) Tj
+0 -15 Td
+/F1 12 Tf
+(AML SAR QC/QA Analyst) Tj
+/F1 11 Tf
+( - Ezeks Systems (June 2021 - Present) Tj
+0 -15 Td
+(Conduct detailed AML, Economic Sanctions, and OFAC investigations ensuring strict adherence to) Tj
+0 -12 Td
+(government regulations. Review escalated cases, analyze transactional data, and manage suspicious) Tj
+0 -12 Td
+(activity cases with detailed SAR narrative drafting within regulatory deadlines.) Tj
+0 -20 Td
+/F1 12 Tf
+(AML / Fraud Analyst - TD Ameritrade, TX (July 2019 - June 2021) Tj
+0 -15 Td
+/F1 11 Tf
+(Executed Enhanced Due Diligence (EDD) on high-risk customers. Investigated complex fraud cases) Tj
+0 -12 Td
+(related to account takeovers, wire transfers, and identity theft. Ensured full compliance with USA PATRIOT) Tj
+0 -12 Td
+(Act, Bank Secrecy Act (BSA), and OFAC regulations.) Tj
+0 -30 Td
+/F1 14 Tf
+(EDUCATION & CERTIFICATIONS) Tj
+0 -15 Td
+/F1 11 Tf
+(BSc in Banking & Finance - Ambrose Alli University, Ekpoma, Edo State, Nigeria) Tj
+0 -12 Td
+(CISA - Certified Information Systems Auditor (ISACA)) Tj
+0 -12 Td
+(CRISC - Certified in Risk and Information Systems Control (ISACA)) Tj
+0 -20 Td
+/F1 12 Tf
+(TECHNICAL TOOLS & SKILLS) Tj
+0 -15 Td
+/F1 11 Tf
+(CAD | FIU Reporting Databases | Case Management Tools | Microsoft Office Suite | Google Workspace |) Tj
+0 -12 Td
+(Data Verification Systems | RLHF | Risk Assessment & Mitigation) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000222 00000 n
+0000002271 00000 n
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2350
+%%EOF
+            `;
+
+            // Create blob and download
+            const blob = new Blob([pdfContent], { type: 'application/pdf' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Lilian_Chukwu_CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Smooth scroll enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
